@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20
+    runs-on: ubuntu-latest
     # if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -21,7 +21,7 @@ jobs:
       - name: 初始化Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.7
+          python-version: 3.x
       - name: 开始
         run: |
           pip install requests
